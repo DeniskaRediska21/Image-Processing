@@ -12,4 +12,4 @@ def image_brightness(path:str,verbose=True, bias = [0,0,0]):
 
 
 
-img_contrasted = image_brightness(path = "Data/Lerik.jpg", verbose=True, bias = [100,100,100])
+img_contrasted = image_brightness(path = "Data/Penguins.jpg", verbose=True, bias = [100,100,100])
