@@ -12,4 +12,4 @@ def image_contrast(path:str,verbose=True,factor = [1,1,1], bias = [128,128,128])
 
 
 
-img_contrasted = image_contrast(path = "Data/Lerik.jpg", verbose=True,factor = [1,1,1], bias = [128,128,128])
+img_contrasted = image_contrast(path = "Data/Penguins.jpg", verbose=True,factor = [1,1,1], bias = [128,128,128])
