@@ -19,4 +19,4 @@ def image_grayscale(path:str,verbose=True,saturation = 1):
 
 
 saturation = 0.5
-img_grayscale = image_grayscale(path = "Data/Lerik.jpg", verbose=True,saturation = saturation)
+img_grayscale = image_grayscale(path = "Data/Penguins.jpg", verbose=True,saturation = saturation)
