@@ -101,12 +101,48 @@ ________
 ## image_contrast Function Defenition
 
 ```
-image_contrast(path:str,factor = [1,1,1], bias = [128,128,128], verbose=True)
+image_contrast(PATH:str,factor = [1,1,1], bias = [128,128,128], verbose=True)
 ```
 
 ### Inputs 
 
++ PATH - path to original image
++ factor - contrasting factor
++ bias - bias of contrasting formula, [128,128,128] for no bias
++ verbose - if True show resulting image on screen
 
 ### Outputs
 
++ PIL Image - containig resulting image
+
+________
+
+## Contrast Results
+
+### Original Image
+
+![Original Image](Data/Penguins.jpg)
+
+________
+
+### Double Contrast
+
+```
+img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [2,2,2], bias = [128,128,128])
+img_contrasted.save("Results/double_contrast.jpg")
+```
+
+![Double Contrast](Results/double_contrast.jpg)
+________
+
+### Half Contrast
+
+```
+img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [0.5,0.5,0.5], bias = [128,128,128])
+img_contrasted.save("Results/half_contrast.jpg")
+```
+
+![Half Contrast](Results/half_contrast.jpg)
+
+________
 
