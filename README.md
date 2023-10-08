@@ -98,5 +98,15 @@ img.save("Results/half_saturation.jpg")
 
 ________
 
+## image_contrast Function Defenition
+
+```
+image_contrast(path:str,factor = [1,1,1], bias = [128,128,128], verbose=True)
+```
+
+### Inputs 
+
+
+### Outputs
 
 
