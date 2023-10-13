@@ -20,8 +20,8 @@ def image_saturation(PATH:str, saturation = 1, verbose=True):
 
 
 
-# img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [2,2,2])
-# img.save("Results/double_saturation.jpg")
-# 
-# img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [0.5,0.5,0.5])
-# img.save("Results/half_saturation.jpg")
+#img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [2,2,2])
+#img.save("Results/double_saturation.jpg")
+#
+#img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [0.5,0.5,0.5])
+#img.save("Results/half_saturation.jpg")

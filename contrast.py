@@ -12,8 +12,8 @@ def image_contrast(PATH:str,factor = [1,1,1], bias = [128,128,128], verbose=True
 
 
 
-img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [2,2,2], bias = [128,128,128])
-img_contrasted.save("Results/double_contrast.jpg")
-
-img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [0.5,0.5,0.5], bias = [128,128,128])
-img_contrasted.save("Results/half_contrast.jpg")
+#img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [2,2,2], bias = [128,128,128])
+#img_contrasted.save("Results/double_contrast.jpg")
+#
+#img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [0.5,0.5,0.5], bias = [128,128,128])
+#img_contrasted.save("Results/half_contrast.jpg")

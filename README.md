@@ -146,3 +146,31 @@ img_contrasted.save("Results/half_contrast.jpg")
 
 ________
 
+
+## image_grayscale
+
+```
+image_grayscale(PATH:str,factor = [1,1,1],verbose=True)
+```
+
+### Inputs 
+
++ PATH - path to original image
++ factor - each colors contribution to final color
++ verbose - if True show resulting image on screen
+
+### Outputs
+
++ PIL Image - containig resulting image
+
+________
+
+## Grayscale Results
+
+| Original Image                       | Grayscale with mean colors                    | Grayscale with different color contributions      |
+|--------------------------------------|-----------------------------------------------|---------------------------------------------------|
+| ![Original Image](Data/Penguins.jpg) | ![Mean Grayscale](Results/grayscale_mean.jpg) | ![Custom Grayscale](Results/grayscale_custom.jpg) |
+
+________
+
+
