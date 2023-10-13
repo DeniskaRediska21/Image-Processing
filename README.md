@@ -116,7 +116,7 @@ image_grayscale(PATH:str,factor = [1,1,1],verbose=True)
 ## Grayscale Results
 
 ```
-img_contrasted.save("Results/minus_50_brightness.jpg")
+factor = [1,1,1]
 img = image_grayscale(PATH = "Data/Penguins.jpg", verbose=True,factor = factor)
 factor = [3*0.299,3*0.587,3*0.114]
 img = image_grayscale(PATH = "Data/Penguins.jpg", verbose=True,factor = factor)
