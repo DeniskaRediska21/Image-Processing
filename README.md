@@ -22,21 +22,12 @@ ________
 ### Brightness Results
 ________
 
-#### Original
-
-![Original](Data/Penguins.jpg)
-
-________
-
 #### Brightness +50
 
 ```
 img_contrasted = image_brightness(path = "Data/Penguins.jpg", verbose=True, bias = [50,50,50])
 img_contrasted.save("Results/plus_50_brightness.jpg")
 ```
-
-![Brightness +50](Results/plus_50_brightness.jpg)
-
 ________
 
 #### Brightness -50
@@ -46,7 +37,9 @@ img_contrasted = image_brightness(path = "Data/Penguins.jpg", verbose=True, bias
 img_contrasted.save("Results/minus_50_brightness.jpg")
 ```
 
-![Brightness -50](Results/minus_50_brightness.jpg)
+| Original Image                       | Grayscale with mean colors                         | Grayscale with different color contributions        |
+|--------------------------------------|----------------------------------------------------|-----------------------------------------------------|
+| ![Original Image](Data/Penguins.jpg) | ![Mean Grayscale](Results/minus_50_brightness.jpg) | ![Custom Grayscale](Results/plus_50_brightness.jpg) |
 
 ________
 
@@ -70,11 +63,6 @@ ________
 
 ## Saturation Results
 
-### Original image 
-
-![Original image](Data/Penguins.jpg)
-
-________
 
 ### Double Saturation
 
@@ -82,8 +70,6 @@ ________
 img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [2,2,2])
 img.save("Results/double_saturation.jpg")
 ```
-
-![Double Saturation](Results/double_saturation.jpg)
 
 ________
 
@@ -94,8 +80,11 @@ img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [0.
 img.save("Results/half_saturation.jpg")
 ```
 
-![Half Saturation](Results/half_saturation.jpg)
+________
 
+| Original Image                       | Half Saturation                                | Double Saturation                                  |
+|--------------------------------------|------------------------------------------------|----------------------------------------------------|
+| ![Original Image](Data/Penguins.jpg) | ![Mean Grayscale](Results/half_saturation.jpg) | ![Custom Grayscale](Results/double_saturation.jpg) |
 ________
 
 ## image_contrast Function Defenition
@@ -119,10 +108,6 @@ ________
 
 ## Contrast Results
 
-### Original Image
-
-![Original Image](Data/Penguins.jpg)
-
 ________
 
 ### Double Contrast
@@ -132,7 +117,6 @@ img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor 
 img_contrasted.save("Results/double_contrast.jpg")
 ```
 
-![Double Contrast](Results/double_contrast.jpg)
 ________
 
 ### Half Contrast
@@ -142,7 +126,11 @@ img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor 
 img_contrasted.save("Results/half_contrast.jpg")
 ```
 
-![Half Contrast](Results/half_contrast.jpg)
+________
+
+| Original Image                       | Half Contrast                                  | Double Contrast                                    |
+|--------------------------------------|------------------------------------------------|----------------------------------------------------|
+| ![Original Image](Data/Penguins.jpg) | ![Mean Grayscale](Results/half_contrast.jpg) | ![Custom Grayscale](Results/double_contrast.jpg) |
 
 ________
 
