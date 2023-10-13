@@ -2,6 +2,8 @@
 
 Various basic image pocessing techniques implemented in python
 
+________
+
 ## image_brightness Function Defenition
 
 ```
@@ -17,24 +19,12 @@ image_brightness(PATH:str, bias = [0,0,0], verbose=True)
 ### Outputs
 
 + PIL Image - containig resulting image
-________
 
 ### Brightness Results
-________
-
-#### Brightness +50
 
 ```
-img_contrasted = image_brightness(path = "Data/Penguins.jpg", verbose=True, bias = [50,50,50])
-img_contrasted.save("Results/plus_50_brightness.jpg")
-```
-________
-
-#### Brightness -50
-
-```
-img_contrasted = image_brightness(path = "Data/Penguins.jpg", verbose=True, bias = [-50,-50,-50])
-img_contrasted.save("Results/minus_50_brightness.jpg")
+img_contrasted = image_brightness(path = "Data/Penguins.jpg", verbose=True, bias = [50,50,50]) # Brightness +50
+img_contrasted = image_brightness(path = "Data/Penguins.jpg", verbose=True, bias = [-50,-50,-50]) # Brightness -50
 ```
 
 | Original Image                       | Minus 50 brightness                                     | Plus 50 brightness                                    |
@@ -59,28 +49,14 @@ image_saturation(PATH:str, saturation = 1, verbose=True)
 
 + PIL Image - containig resulting image
 
-________
 
 ## Saturation Results
 
-
-### Double Saturation
-
 ```
-img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [2,2,2])
-img.save("Results/double_saturation.jpg")
+img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [2,2,2])# Double Saturation
+img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [0.5,0.5,0.5]) # Half Saturation
 ```
 
-________
-
-### Half Saturation
-
-```
-img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [0.5,0.5,0.5])
-img.save("Results/half_saturation.jpg")
-```
-
-________
 
 | Original Image                       | Half Saturation                                 | Double Saturation                                   |
 |--------------------------------------|-------------------------------------------------|-----------------------------------------------------|
@@ -104,29 +80,14 @@ image_contrast(PATH:str,factor = [1,1,1], bias = [128,128,128], verbose=True)
 
 + PIL Image - containig resulting image
 
-________
 
 ## Contrast Results
 
-________
-
-### Double Contrast
-
 ```
-img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [2,2,2], bias = [128,128,128])
-img_contrasted.save("Results/double_contrast.jpg")
+img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [2,2,2], bias = [128,128,128]) # Double Contrast
+img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [0.5,0.5,0.5], bias = [128,128,128]) # Half Contrast
 ```
 
-________
-
-### Half Contrast
-
-```
-img_contrasted = image_contrast(PATH = "Data/Penguins.jpg", verbose=True,factor = [0.5,0.5,0.5], bias = [128,128,128])
-img_contrasted.save("Results/half_contrast.jpg")
-```
-
-________
 
 | Original Image                       | Half Contrast                               | Double Contrast                                 |
 |--------------------------------------|---------------------------------------------|-------------------------------------------------|
@@ -151,9 +112,15 @@ image_grayscale(PATH:str,factor = [1,1,1],verbose=True)
 
 + PIL Image - containig resulting image
 
-________
 
 ## Grayscale Results
+
+```
+img_contrasted.save("Results/minus_50_brightness.jpg")
+img = image_grayscale(PATH = "Data/Penguins.jpg", verbose=True,factor = factor)
+factor = [3*0.299,3*0.587,3*0.114]
+img = image_grayscale(PATH = "Data/Penguins.jpg", verbose=True,factor = factor)
+```
 
 | Original Image                       | Grayscale with mean colors                    | Grayscale with different color contributions      |
 |--------------------------------------|-----------------------------------------------|---------------------------------------------------|
