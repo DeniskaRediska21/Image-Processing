@@ -4,7 +4,7 @@ Various basic image pocessing techniques implemented in python
 
 ________
 
-## image_brightness Function Defenition
+## image_brightness
 
 ```
 image_brightness(PATH:str, bias = [0,0,0], verbose=True)
@@ -33,7 +33,7 @@ img_contrasted = image_brightness(path = "Data/Penguins.jpg", verbose=True, bias
 
 ________
 
-## image_saturation Function Defenition
+## image_saturation
 
 ```
 image_saturation(PATH:str, saturation = 1, verbose=True)
@@ -63,7 +63,7 @@ img = image_saturation(PATH = "Data/Penguins.jpg", verbose=True,saturation = [0.
 | ![Original Image](Data/Penguins.jpg) | ![Half Saturation](Results/half_saturation.jpg) | ![Double Saturation](Results/double_saturation.jpg) |
 ________
 
-## image_contrast Function Defenition
+## image_contrast
 
 ```
 image_contrast(PATH:str,factor = [1,1,1], bias = [128,128,128], verbose=True)
@@ -102,7 +102,7 @@ ________
 image_grayscale(PATH:str,factor = [1,1,1],verbose=True)
 ```
 
-### Inputs 
+### Inputs
 
 + PATH - path to original image
 + factor - each colors contribution to final color
@@ -129,3 +129,36 @@ img = image_grayscale(PATH = "Data/Penguins.jpg", verbose=True,factor = factor)
 ________
 
 
+## to_palet
+
+```
+to_palet(PATH, colors = [0,255], verbose = True)
+```
+
+### Inputs
+
++ PATH - path to original image
++ colors - list of colors to port image to in form of [list(R),list(G),list(B)] or list(Gray)
++ verbose - if True show resulting image on screen
+
+### Outputs
+
++ PIL Image - containig resulting image
+
+
+## Grayscale Results
+
+```
+palet = [list(range(0,255,25)),list(range(0,255,25)),list(range(0,255,25))]
+img = to_palet('Data/Penguins.jpg', colors = palet, verbose = True)
+
+palet = [[54,77,249,245],[48,76,148,245],[98,125,23,245]]
+img = to_palet('Data/Penguins.jpg', colors = palet, verbose = True)
+```
+
+| Original Image                       | Colors redused to 30                           | Custom color palet                           |
+|--------------------------------------|------------------------------------------------|----------------------------------------------|
+| ![Original Image](Data/Penguins.jpg) | ![Colors redused to 30](Results/to_palet1.jpg) | ![Custom color palet](Results/to_palet2.jpg) |
+
+
+________
