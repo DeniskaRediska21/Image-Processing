@@ -1,8 +1,11 @@
 from PIL import Image
 import numpy as np
 
-def image_brightness(PATH:str, bias = [0,0,0], verbose=True):
-	img = np.array(Image.open(PATH))
+def image_brightness(PATH = '', bias = [0,0,0], verbose=True,IMAGE = None):
+    if IMAGE is None:
+        img = np.array(Image.open(PATH))
+    else:
+        img = np.array(IMAGE)
 	img_contrasted =np.clip(np.add(img,bias),0,255).astype(np.uint8)
 	img_contrasted = Image.fromarray(img_contrasted)
 	if verbose:

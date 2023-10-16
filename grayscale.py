@@ -1,8 +1,11 @@
 from PIL import Image
 import numpy as np
 
-def image_grayscale(PATH:str,factor = [1,1,1],verbose=True):
-	img = np.array(Image.open(PATH))
+def image_grayscale(PATH = '',factor = [1,1,1],verbose=True,IMAGE = None):
+    if IMAGE is None:
+        img = np.array(Image.open(PATH))
+    else:
+        img = np.array(IMAGE)
 	img_contrasted = np.mean(np.clip(np.multiply(factor,img),0,255),2).astype(np.uint8)
 	img_contrasted = Image.fromarray(img_contrasted)
 	if verbose:

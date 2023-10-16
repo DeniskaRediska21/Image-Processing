@@ -1,13 +1,14 @@
 from PIL import Image
 import numpy as np
 
-def to_palet(PATH, colors = [0,255], verbose = True): 
-    # PATH = 'Data/Penguins.jpg'
-    # colors = [[0,255],[0,255],[0,255]]
-    # verbose = True
-    
+def to_palet(PATH = '', colors = [0,255], verbose = True, IMAGE = None): 
+
     colors = np.array(colors)
-    img = np.array(Image.open(PATH))/255
+    if IMAGE is None:
+        img = np.array(Image.open(PATH))/255
+    else:
+        img = np.array(IMAGE)/255
+
     
     if len(colors.shape) == 1:
         colors = colors[None,:]
